@@ -1,0 +1,5 @@
+yes*
+*.pub
+venv
+storage
+data
