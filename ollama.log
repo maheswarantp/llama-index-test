@@ -1,37 +1,22 @@
-Couldn't find '/root/.ollama/id_ed25519'. Generating new private key.
-Your new public key is: 
-
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICCuqbtFbPMCtWbREuFksu9Ie77GG9myKZF5ez+vsaUz
-
-2024/08/21 15:27:17 routes.go:1125: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_LLM_LIBRARY: OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/root/.ollama/models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://*] OLLAMA_RUNNERS_DIR: OLLAMA_SCHED_SPREAD:false OLLAMA_TMPDIR: ROCR_VISIBLE_DEVICES:]"
-time=2024-08-21T15:27:17.856Z level=INFO source=images.go:782 msg="total blobs: 0"
-time=2024-08-21T15:27:17.856Z level=INFO source=images.go:790 msg="total unused blobs removed: 0"
-time=2024-08-21T15:27:17.857Z level=INFO source=routes.go:1172 msg="Listening on 127.0.0.1:11434 (version 0.3.6)"
-time=2024-08-21T15:27:17.857Z level=INFO source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama2046785533/runners
-time=2024-08-21T15:27:22.945Z level=INFO source=payload.go:44 msg="Dynamic LLM libraries [cpu_avx cpu_avx2 cuda_v11 rocm_v60102 cpu]"
-time=2024-08-21T15:27:22.945Z level=INFO source=gpu.go:204 msg="looking for compatible GPUs"
-time=2024-08-21T15:27:23.138Z level=INFO source=types.go:105 msg="inference compute" id=GPU-ac9fd332-dc35-d98b-7da5-96f7dcbab9b8 library=cuda compute=8.9 driver=12.2 name="NVIDIA GeForce RTX 4090" total="23.6 GiB" available="23.3 GiB"
-[GIN] 2024/08/21 - 15:27:31 | 200 |      63.259µs |       127.0.0.1 | HEAD     "/"
-time=2024-08-21T15:27:33.856Z level=INFO source=download.go:175 msg="downloading 6a0746a1ec1a in 47 100 MB part(s)"
-time=2024-08-21T15:27:48.916Z level=INFO source=download.go:175 msg="downloading 4fa551d4f938 in 1 12 KB part(s)"
-time=2024-08-21T15:27:51.014Z level=INFO source=download.go:175 msg="downloading 8ab4849b038c in 1 254 B part(s)"
-time=2024-08-21T15:27:53.105Z level=INFO source=download.go:175 msg="downloading 577073ffcc6c in 1 110 B part(s)"
-time=2024-08-21T15:27:55.172Z level=INFO source=download.go:175 msg="downloading 3f8eb4da87fa in 1 485 B part(s)"
-[GIN] 2024/08/21 - 15:27:59 | 200 |  28.03320723s |       127.0.0.1 | POST     "/api/pull"
-[GIN] 2024/08/21 - 15:28:05 | 200 |       39.25µs |       127.0.0.1 | HEAD     "/"
-[GIN] 2024/08/21 - 15:28:05 | 404 |      169.67µs |       127.0.0.1 | POST     "/api/show"
-[GIN] 2024/08/21 - 15:28:06 | 200 |  844.642337ms |       127.0.0.1 | POST     "/api/pull"
-[GIN] 2024/08/21 - 15:28:07 | 200 |       31.24µs |       127.0.0.1 | HEAD     "/"
-[GIN] 2024/08/21 - 15:28:07 | 200 |   48.272158ms |       127.0.0.1 | POST     "/api/show"
-time=2024-08-21T15:28:08.097Z level=INFO source=sched.go:710 msg="new model will fit in available VRAM in single GPU, loading" model=/root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa gpu=GPU-ac9fd332-dc35-d98b-7da5-96f7dcbab9b8 parallel=4 available=24983175168 required="6.2 GiB"
-time=2024-08-21T15:28:08.098Z level=INFO source=memory.go:309 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[23.3 GiB]" memory.required.full="6.2 GiB" memory.required.partial="6.2 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[6.2 GiB]" memory.weights.total="4.7 GiB" memory.weights.repeating="4.3 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="677.5 MiB"
-time=2024-08-21T15:28:08.101Z level=INFO source=server.go:393 msg="starting llama server" cmd="/tmp/ollama2046785533/runners/cuda_v11/ollama_llama_server --model /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa --ctx-size 8192 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 4 --port 42051"
-time=2024-08-21T15:28:08.101Z level=INFO source=sched.go:445 msg="loaded runners" count=1
-time=2024-08-21T15:28:08.101Z level=INFO source=server.go:593 msg="waiting for llama runner to start responding"
-time=2024-08-21T15:28:08.102Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server error"
-INFO [main] build info | build=1 commit="1e6f655" tid="140484273012736" timestamp=1724254088
-INFO [main] system info | n_threads=32 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="140484273012736" timestamp=1724254088 total_threads=64
-INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="63" port="42051" tid="140484273012736" timestamp=1724254088
+2024/08/24 15:52:24 routes.go:1125: INFO server config env="map[CUDA_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: OLLAMA_DEBUG:false OLLAMA_FLASH_ATTENTION:false OLLAMA_HOST:http://0.0.0.0:11434 OLLAMA_INTEL_GPU:false OLLAMA_KEEP_ALIVE:5m0s OLLAMA_LLM_LIBRARY: OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MODELS:/root/.ollama/models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:0 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://*] OLLAMA_RUNNERS_DIR: OLLAMA_SCHED_SPREAD:false OLLAMA_TMPDIR: ROCR_VISIBLE_DEVICES:]"
+time=2024-08-24T15:52:24.726Z level=INFO source=images.go:782 msg="total blobs: 5"
+time=2024-08-24T15:52:24.727Z level=INFO source=images.go:790 msg="total unused blobs removed: 0"
+time=2024-08-24T15:52:24.727Z level=INFO source=routes.go:1172 msg="Listening on [::]:11434 (version 0.3.6)"
+time=2024-08-24T15:52:24.885Z level=INFO source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama1223070966/runners
+time=2024-08-24T15:52:30.091Z level=INFO source=payload.go:44 msg="Dynamic LLM libraries [cpu_avx cpu_avx2 cuda_v11 rocm_v60102 cpu]"
+time=2024-08-24T15:52:30.091Z level=INFO source=gpu.go:204 msg="looking for compatible GPUs"
+time=2024-08-24T15:52:30.242Z level=INFO source=types.go:105 msg="inference compute" id=GPU-49ab817c-9e1b-59a0-9f82-2f7da39016f1 library=cuda compute=8.9 driver=12.2 name="NVIDIA GeForce RTX 4090" total="23.6 GiB" available="23.3 GiB"
+[GIN] 2024/08/24 - 15:52:33 | 200 |       58.71µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2024/08/24 - 15:52:33 | 200 |   25.895551ms |       127.0.0.1 | POST     "/api/show"
+time=2024-08-24T15:52:33.990Z level=INFO source=sched.go:710 msg="new model will fit in available VRAM in single GPU, loading" model=/root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa gpu=GPU-49ab817c-9e1b-59a0-9f82-2f7da39016f1 parallel=4 available=24983175168 required="6.2 GiB"
+time=2024-08-24T15:52:33.991Z level=INFO source=memory.go:309 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[23.3 GiB]" memory.required.full="6.2 GiB" memory.required.partial="6.2 GiB" memory.required.kv="1.0 GiB" memory.required.allocations="[6.2 GiB]" memory.weights.total="4.7 GiB" memory.weights.repeating="4.3 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="560.0 MiB" memory.graph.partial="677.5 MiB"
+time=2024-08-24T15:52:33.997Z level=INFO source=server.go:393 msg="starting llama server" cmd="/tmp/ollama1223070966/runners/cuda_v11/ollama_llama_server --model /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa --ctx-size 8192 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 4 --port 45849"
+time=2024-08-24T15:52:33.997Z level=INFO source=sched.go:445 msg="loaded runners" count=1
+time=2024-08-24T15:52:33.997Z level=INFO source=server.go:593 msg="waiting for llama runner to start responding"
+time=2024-08-24T15:52:33.997Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server error"
+INFO [main] build info | build=1 commit="1e6f655" tid="140693654929408" timestamp=1724514754
+INFO [main] system info | n_threads=32 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="140693654929408" timestamp=1724514754 total_threads=64
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="63" port="45849" tid="140693654929408" timestamp=1724514754
 llama_model_loader: loaded meta data with 22 key-value pairs and 291 tensors from /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa (version GGUF V3 (latest))
 llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
 llama_model_loader: - kv   0:                       general.architecture str              = llama
@@ -59,7 +44,7 @@ llama_model_loader: - kv  21:               general.quantization_version u32    
 llama_model_loader: - type  f32:   65 tensors
 llama_model_loader: - type q4_0:  225 tensors
 llama_model_loader: - type q6_K:    1 tensors
-time=2024-08-21T15:28:08.353Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server loading model"
+time=2024-08-24T15:52:34.249Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server loading model"
 llm_load_vocab: special tokens cache size = 256
 llm_load_vocab: token to piece cache size = 0.8000 MB
 llm_load_print_meta: format           = GGUF V3 (latest)
@@ -133,21 +118,21 @@ llama_new_context_with_model:      CUDA0 compute buffer size =   560.00 MiB
 llama_new_context_with_model:  CUDA_Host compute buffer size =    24.01 MiB
 llama_new_context_with_model: graph nodes  = 1030
 llama_new_context_with_model: graph splits = 2
-INFO [main] model loaded | tid="140484273012736" timestamp=1724254089
-time=2024-08-21T15:28:09.907Z level=INFO source=server.go:632 msg="llama runner started in 1.81 seconds"
-[GIN] 2024/08/21 - 15:28:09 | 200 |   2.00056959s |       127.0.0.1 | POST     "/api/chat"
-[GIN] 2024/08/21 - 15:28:15 | 200 |  1.352285989s |       127.0.0.1 | POST     "/api/chat"
-[GIN] 2024/08/21 - 15:28:26 | 200 |  3.133045055s |       127.0.0.1 | POST     "/api/chat"
-[GIN] 2024/08/21 - 15:28:29 | 200 |   758.86284ms |       127.0.0.1 | POST     "/api/chat"
-time=2024-08-21T15:29:04.685Z level=INFO source=sched.go:710 msg="new model will fit in available VRAM in single GPU, loading" model=/root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa gpu=GPU-ac9fd332-dc35-d98b-7da5-96f7dcbab9b8 parallel=4 available=23731634176 required="7.6 GiB"
-time=2024-08-21T15:29:04.685Z level=INFO source=memory.go:309 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[22.1 GiB]" memory.required.full="7.6 GiB" memory.required.partial="7.6 GiB" memory.required.kv="1.9 GiB" memory.required.allocations="[7.6 GiB]" memory.weights.total="5.6 GiB" memory.weights.repeating="5.2 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="1.0 GiB" memory.graph.partial="1.1 GiB"
-time=2024-08-21T15:29:04.688Z level=INFO source=server.go:393 msg="starting llama server" cmd="/tmp/ollama2046785533/runners/cuda_v11/ollama_llama_server --model /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa --ctx-size 15600 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 4 --port 46077"
-time=2024-08-21T15:29:04.689Z level=INFO source=sched.go:445 msg="loaded runners" count=1
-time=2024-08-21T15:29:04.689Z level=INFO source=server.go:593 msg="waiting for llama runner to start responding"
-time=2024-08-21T15:29:04.690Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server error"
-INFO [main] build info | build=1 commit="1e6f655" tid="140191002923008" timestamp=1724254144
-INFO [main] system info | n_threads=32 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="140191002923008" timestamp=1724254144 total_threads=64
-INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="63" port="46077" tid="140191002923008" timestamp=1724254144
+INFO [main] model loaded | tid="140693654929408" timestamp=1724514756
+time=2024-08-24T15:52:36.255Z level=INFO source=server.go:632 msg="llama runner started in 2.26 seconds"
+[GIN] 2024/08/24 - 15:52:36 | 200 |  2.472924215s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2024/08/24 - 15:52:47 | 200 |       25.07µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2024/08/24 - 15:52:47 | 200 |   30.199382ms |       127.0.0.1 | POST     "/api/show"
+[GIN] 2024/08/24 - 15:52:47 | 200 |   33.670643ms |       127.0.0.1 | POST     "/api/chat"
+time=2024-08-24T15:53:19.434Z level=INFO source=sched.go:710 msg="new model will fit in available VRAM in single GPU, loading" model=/root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa gpu=GPU-49ab817c-9e1b-59a0-9f82-2f7da39016f1 parallel=4 available=23983292416 required="7.6 GiB"
+time=2024-08-24T15:53:19.435Z level=INFO source=memory.go:309 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[22.3 GiB]" memory.required.full="7.6 GiB" memory.required.partial="7.6 GiB" memory.required.kv="1.9 GiB" memory.required.allocations="[7.6 GiB]" memory.weights.total="5.6 GiB" memory.weights.repeating="5.2 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="1.0 GiB" memory.graph.partial="1.1 GiB"
+time=2024-08-24T15:53:19.439Z level=INFO source=server.go:393 msg="starting llama server" cmd="/tmp/ollama1223070966/runners/cuda_v11/ollama_llama_server --model /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa --ctx-size 15600 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 4 --port 38511"
+time=2024-08-24T15:53:19.439Z level=INFO source=sched.go:445 msg="loaded runners" count=1
+time=2024-08-24T15:53:19.439Z level=INFO source=server.go:593 msg="waiting for llama runner to start responding"
+time=2024-08-24T15:53:19.440Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server error"
+INFO [main] build info | build=1 commit="1e6f655" tid="139631929548800" timestamp=1724514799
+INFO [main] system info | n_threads=32 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="139631929548800" timestamp=1724514799 total_threads=64
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="63" port="38511" tid="139631929548800" timestamp=1724514799
 llama_model_loader: loaded meta data with 22 key-value pairs and 291 tensors from /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa (version GGUF V3 (latest))
 llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
 llama_model_loader: - kv   0:                       general.architecture str              = llama
@@ -175,7 +160,7 @@ llama_model_loader: - kv  21:               general.quantization_version u32    
 llama_model_loader: - type  f32:   65 tensors
 llama_model_loader: - type q4_0:  225 tensors
 llama_model_loader: - type q6_K:    1 tensors
-time=2024-08-21T15:29:04.942Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server loading model"
+time=2024-08-24T15:53:19.691Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server loading model"
 llm_load_vocab: special tokens cache size = 256
 llm_load_vocab: token to piece cache size = 0.8000 MB
 llm_load_print_meta: format           = GGUF V3 (latest)
@@ -249,18 +234,18 @@ llama_new_context_with_model:      CUDA0 compute buffer size =  1038.50 MiB
 llama_new_context_with_model:  CUDA_Host compute buffer size =    38.51 MiB
 llama_new_context_with_model: graph nodes  = 1030
 llama_new_context_with_model: graph splits = 2
-INFO [main] model loaded | tid="140191002923008" timestamp=1724254146
-time=2024-08-21T15:29:06.198Z level=INFO source=server.go:632 msg="llama runner started in 1.51 seconds"
-[GIN] 2024/08/21 - 15:29:06 | 200 |   2.98762554s |       127.0.0.1 | POST     "/api/chat"
-time=2024-08-21T15:36:51.980Z level=INFO source=sched.go:710 msg="new model will fit in available VRAM in single GPU, loading" model=/root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa gpu=GPU-ac9fd332-dc35-d98b-7da5-96f7dcbab9b8 parallel=4 available=23731634176 required="7.6 GiB"
-time=2024-08-21T15:36:51.980Z level=INFO source=memory.go:309 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[22.1 GiB]" memory.required.full="7.6 GiB" memory.required.partial="7.6 GiB" memory.required.kv="1.9 GiB" memory.required.allocations="[7.6 GiB]" memory.weights.total="5.6 GiB" memory.weights.repeating="5.2 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="1.0 GiB" memory.graph.partial="1.1 GiB"
-time=2024-08-21T15:36:51.984Z level=INFO source=server.go:393 msg="starting llama server" cmd="/tmp/ollama2046785533/runners/cuda_v11/ollama_llama_server --model /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa --ctx-size 15600 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 4 --port 44569"
-time=2024-08-21T15:36:51.984Z level=INFO source=sched.go:445 msg="loaded runners" count=1
-time=2024-08-21T15:36:51.984Z level=INFO source=server.go:593 msg="waiting for llama runner to start responding"
-time=2024-08-21T15:36:51.984Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server error"
-INFO [main] build info | build=1 commit="1e6f655" tid="139787993698304" timestamp=1724254612
-INFO [main] system info | n_threads=32 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="139787993698304" timestamp=1724254612 total_threads=64
-INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="63" port="44569" tid="139787993698304" timestamp=1724254612
+INFO [main] model loaded | tid="139631929548800" timestamp=1724514801
+time=2024-08-24T15:53:21.448Z level=INFO source=server.go:632 msg="llama runner started in 2.01 seconds"
+[GIN] 2024/08/24 - 15:53:21 | 200 |  2.937261512s |       127.0.0.1 | POST     "/api/chat"
+time=2024-08-24T16:06:08.425Z level=INFO source=sched.go:710 msg="new model will fit in available VRAM in single GPU, loading" model=/root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa gpu=GPU-49ab817c-9e1b-59a0-9f82-2f7da39016f1 parallel=4 available=23983292416 required="7.6 GiB"
+time=2024-08-24T16:06:08.426Z level=INFO source=memory.go:309 msg="offload to cuda" layers.requested=-1 layers.model=33 layers.offload=33 layers.split="" memory.available="[22.3 GiB]" memory.required.full="7.6 GiB" memory.required.partial="7.6 GiB" memory.required.kv="1.9 GiB" memory.required.allocations="[7.6 GiB]" memory.weights.total="5.6 GiB" memory.weights.repeating="5.2 GiB" memory.weights.nonrepeating="411.0 MiB" memory.graph.full="1.0 GiB" memory.graph.partial="1.1 GiB"
+time=2024-08-24T16:06:08.431Z level=INFO source=server.go:393 msg="starting llama server" cmd="/tmp/ollama1223070966/runners/cuda_v11/ollama_llama_server --model /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa --ctx-size 15600 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 4 --port 39807"
+time=2024-08-24T16:06:08.431Z level=INFO source=sched.go:445 msg="loaded runners" count=1
+time=2024-08-24T16:06:08.431Z level=INFO source=server.go:593 msg="waiting for llama runner to start responding"
+time=2024-08-24T16:06:08.432Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server error"
+INFO [main] build info | build=1 commit="1e6f655" tid="139864078110720" timestamp=1724515568
+INFO [main] system info | n_threads=32 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="139864078110720" timestamp=1724515568 total_threads=64
+INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="63" port="39807" tid="139864078110720" timestamp=1724515568
 llama_model_loader: loaded meta data with 22 key-value pairs and 291 tensors from /root/.ollama/models/blobs/sha256-6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa (version GGUF V3 (latest))
 llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
 llama_model_loader: - kv   0:                       general.architecture str              = llama
@@ -288,7 +273,7 @@ llama_model_loader: - kv  21:               general.quantization_version u32    
 llama_model_loader: - type  f32:   65 tensors
 llama_model_loader: - type q4_0:  225 tensors
 llama_model_loader: - type q6_K:    1 tensors
-time=2024-08-21T15:36:52.236Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server loading model"
+time=2024-08-24T16:06:08.683Z level=INFO source=server.go:627 msg="waiting for server to become available" status="llm server loading model"
 llm_load_vocab: special tokens cache size = 256
 llm_load_vocab: token to piece cache size = 0.8000 MB
 llm_load_print_meta: format           = GGUF V3 (latest)
@@ -362,8 +347,7 @@ llama_new_context_with_model:      CUDA0 compute buffer size =  1038.50 MiB
 llama_new_context_with_model:  CUDA_Host compute buffer size =    38.51 MiB
 llama_new_context_with_model: graph nodes  = 1030
 llama_new_context_with_model: graph splits = 2
-INFO [main] model loaded | tid="139787993698304" timestamp=1724254613
-time=2024-08-21T15:36:53.491Z level=INFO source=server.go:632 msg="llama runner started in 1.51 seconds"
-[GIN] 2024/08/21 - 15:36:53 | 200 |  2.182540292s |       127.0.0.1 | POST     "/api/chat"
-[GIN] 2024/08/21 - 15:37:59 | 200 |  286.607619ms |       127.0.0.1 | POST     "/api/chat"
-[GIN] 2024/08/21 - 15:38:21 | 200 |  934.541815ms |       127.0.0.1 | POST     "/api/chat"
+INFO [main] model loaded | tid="139864078110720" timestamp=1724515570
+time=2024-08-24T16:06:10.690Z level=INFO source=server.go:632 msg="llama runner started in 2.26 seconds"
+[GIN] 2024/08/24 - 16:06:10 | 200 |  2.713905695s |       127.0.0.1 | POST     "/api/chat"
+[GIN] 2024/08/24 - 16:06:25 | 200 |  293.334077ms |       127.0.0.1 | POST     "/api/chat"

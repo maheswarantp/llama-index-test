@@ -3,3 +3,4 @@ yes*
 venv
 storage
 data
+chroma_db
