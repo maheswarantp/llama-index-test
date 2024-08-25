@@ -4,3 +4,5 @@ venv
 storage
 data
 chroma_db
+agent_dir
+output
